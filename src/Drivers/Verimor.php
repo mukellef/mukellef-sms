@@ -28,7 +28,7 @@ class Verimor extends Sms
     {
         $this->validateConfig();
 
-        try {
+//        try {
             $this->httpClient->request('POST', $this->config['request_endpoint'], [
                 'json' => [
                     'username'    => $this->config['username'],
@@ -43,9 +43,9 @@ class Verimor extends Sms
                     ],
                 ],
             ]);
-        } catch (RequestException $exception) {
-            $this->checkResponse($exception->getCode());
-        }
+//        } catch (RequestException $exception) {
+//            $this->checkResponse($exception->getCode());
+//        }
     }
 
     /**
